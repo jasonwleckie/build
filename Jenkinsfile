@@ -16,7 +16,7 @@ pipeline {
 		}
 		stage ('Who am I?') {agent any
 			steps {
-				echo "$(env.NEW_VAR)"
+				echo "${env.NEW_VAR}"
 				sh 'curl ipecho.net/plain'
 		 	      }
 			
