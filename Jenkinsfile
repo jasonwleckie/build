@@ -19,6 +19,10 @@ pipeline {
 				echo "${env.NEW_VAR}"
 				sh 'curl ipecho.net/plain'
 		 	      }
+		stage ('Deploy to Stage?') {agent any
+			steps {
+				input 'Deploy to Stage?'
+		 	      }
 			
 		}
 	}
