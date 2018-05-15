@@ -6,5 +6,12 @@ pipeline {
 				echo 'Hello world'
 			}
 		}
+		stage ('Who am I?') {agent any
+			steps {
+				sh 'curl ipecho.net/plain'
+				
+		 	      }
+			
+		}
 	}
 }
